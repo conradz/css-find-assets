@@ -21,6 +21,22 @@ test('accept quotes in url function', function(t) {
     t.end();
 });
 
+test('remove query parameters', function(t) {
+    var tree = parse('.test { background-image: url(test.png?query=true); }'),
+        results = find(tree);
+    t.equal(results.length, 1);
+    t.equal(results[0].url, 'test.png');
+    t.end();
+});
+
+test('remove url hash segment', function(t) {
+    var tree = parse('.test { background-image: url(test.png#test); }'),
+        results = find(tree);
+    t.equal(results.length, 1);
+    t.equal(results[0].url, 'test.png');
+    t.end();
+});
+
 test('find multiple assets', function(t) {
     var tree = parse(
         '.test { background-image: url(foo.png); }' +

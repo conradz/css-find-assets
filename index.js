@@ -13,8 +13,12 @@ function find(tree) {
             var pattern = /url\(('[^')+'|"[^"]+"|[^\)]+)\)/g,
                 m;
             while ((m = pattern.exec(d.value)) !== null) {
+                var url = m[1]
+                    .replace(/^['"]|['"]$/g, '')
+                    .replace(/[?#].*$/, '');
+
                 assets.push({
-                    url: m[1].replace(/^['"]|['"]$/g, ''),
+                    url: url,
                     node: d,
                     position: {
                         index: m.index,
