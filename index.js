@@ -10,11 +10,11 @@ function find(tree) {
 
     if (styles.declarations) {
         styles.declarations.forEach(function(d) {
-            var pattern = /url\(['"]([^'"]+)['"]\)/g,
+            var pattern = /url\(('[^')+'|"[^"]+"|[^\)]+)\)/g,
                 m;
             while ((m = pattern.exec(d.value)) !== null) {
                 assets.push({
-                    url: m[1],
+                    url: m[1].replace(/^['"]|['"]$/g, ''),
                     node: d,
                     position: {
                         index: m.index,
