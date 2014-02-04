@@ -1,6 +1,6 @@
 {
   "name": "css-find-assets",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Find all asset files in a CSS AST",
   "main": "index.js",
   "scripts": {
