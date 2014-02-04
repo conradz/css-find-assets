@@ -1,5 +1,7 @@
 # css-find-assets
 
+[![Build Status](https://drone.io/github.com/conradz/css-find-assets/status.png)](https://drone.io/github.com/conradz/css-find-assets/latest)
+
 Find all assets referenced by a CSS AST by searching for properties using
 `url(...)`.
 
