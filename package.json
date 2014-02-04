@@ -1,0 +1,30 @@
+{
+  "name": "css-find-assets",
+  "version": "0.0.0",
+  "description": "Find all asset files in a CSS AST",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conradz/css-find-assets.git"
+  },
+  "keywords": [
+    "css",
+    "assets",
+    "images",
+    "static",
+    "files"
+  ],
+  "author": "Conrad Zimmerman <me@conradz.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/conradz/css-find-assets/issues"
+  },
+  "homepage": "https://github.com/conradz/css-find-assets",
+  "devDependencies": {
+    "tap": "~0.4.8",
+    "css-parse": "~1.7.0"
+  }
+}
